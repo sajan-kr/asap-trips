@@ -7,7 +7,7 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0"/>
 
-  <title>ASAP Trips</title>
+  <title>Flights | ASAP Trips</title>
 
   <!-- Bootstrap -->
   <link
@@ -31,14 +31,211 @@
   <!-- HEADER -->
   <div id="header"></div>
 
-  <!-- PAGE CONTENT -->
-  <section class="hero">
+  <!-- =========================
+       FLIGHTS HERO
+  ========================== -->
+
+  <section class="flights-hero">
+
+    <div class="overlay"></div>
+
+    <div class="container position-relative">
+
+      <div class="row justify-content-center">
+
+        <div class="col-lg-8 text-center">
+
+          <h1>
+            Find Your Perfect Flight
+          </h1>
+
+          <p>
+            Compare airlines, explore destinations,
+            and book cheap flights worldwide.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       FLIGHT SEARCH
+  ========================== -->
+
+  <section class="flight-search-section">
 
     <div class="container">
 
-      <h1>
-        Explore The World
-      </h1>
+      <div class="flight-search-box">
+
+        <div class="row g-4">
+
+          <!-- FROM -->
+          <div class="col-lg-3 col-md-6">
+
+            <label>From</label>
+
+            <div class="search-input">
+
+              <i class="fa-solid fa-plane-departure"></i>
+
+              <input
+                type="text"
+                placeholder="New York"
+              >
+
+            </div>
+
+          </div>
+
+          <!-- TO -->
+          <div class="col-lg-3 col-md-6">
+
+            <label>To</label>
+
+            <div class="search-input">
+
+              <i class="fa-solid fa-plane-arrival"></i>
+
+              <input
+                type="text"
+                placeholder="Dubai"
+              >
+
+            </div>
+
+          </div>
+
+          <!-- DATE -->
+          <div class="col-lg-3 col-md-6">
+
+            <label>Departure</label>
+
+            <div class="search-input">
+
+              <i class="fa-solid fa-calendar"></i>
+
+              <input type="date">
+
+            </div>
+
+          </div>
+
+          <!-- BUTTON -->
+          <div class="col-lg-3 col-md-6 d-flex align-items-end">
+
+            <button class="search-flight-btn w-100">
+
+              Search Flights
+
+              <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       POPULAR DESTINATIONS
+  ========================== -->
+
+  <section class="popular-destination">
+
+    <div class="container">
+
+      <div class="section-title text-center">
+
+        <h2>
+          Popular Destinations
+        </h2>
+
+        <p>
+          Discover trending locations at the best prices
+        </p>
+
+      </div>
+
+      <div class="row g-4">
+
+        <!-- CARD 1 -->
+        <div class="col-lg-4 col-md-6">
+
+          <div class="destination-card">
+
+            <img
+              src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200"
+              alt=""
+            >
+
+            <div class="destination-content">
+
+              <h4>Maldives</h4>
+
+              <p>Starting From $499</p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="col-lg-4 col-md-6">
+
+          <div class="destination-card">
+
+            <img
+              src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=1200"
+              alt=""
+            >
+
+            <div class="destination-content">
+
+              <h4>Paris</h4>
+
+              <p>Starting From $699</p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="col-lg-4 col-md-6">
+
+          <div class="destination-card">
+
+            <img
+              src="https://images.unsplash.com/photo-1505765050516-f72dcac9c60d?q=80&w=1200"
+              alt=""
+            >
+
+            <div class="destination-content">
+
+              <h4>Dubai</h4>
+
+              <p>Starting From $399</p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
 
   </section>
