@@ -451,7 +451,9 @@ select {
     border-top-left-radius: 420px;
     border-top-right-radius: 420px;
     z-index: 1;
-    border: 0px solid rgb(173, 110, 50);
+
+    /* Yellow outline */
+    border: 10px solid rgb(255, 187, 0);
     border-bottom: none;
     box-sizing: border-box;
 }
