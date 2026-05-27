@@ -29,37 +29,55 @@
      HERO SECTION START
 ========================== -->
 
-<section class="flight-hero">
+<!-- =========================================
+     HERO SECTION START
+========================================= -->
 
-  <div class="container">
+<section class="flight-hero d-flex align-items-center position-relative overflow-hidden">
+
+  <!-- HALF CIRCLE -->
+  <div class="hero-circle position-absolute start-50 translate-middle-x"></div>
+
+  <div class="container position-relative z-2">
 
     <!-- HERO CONTENT -->
-    <div class="hero-content text-center">
+    <div class="text-center hero-content">
 
       <!-- PLANE IMAGE -->
-      <div class="plane-image">
+      <div class="plane-image mx-auto">
 
-        <img src="images/hero-plane.png" alt="Plane">
+        <img
+          src="images/hero-plane.png"
+          alt="Plane"
+          class="img-fluid"
+        >
 
       </div>
 
       <!-- TITLE -->
-      <h1>ASAPTRIPS</h1>
+      <h1 class="hero-title text-uppercase fw-bold">
+        ASAPTRIPS
+      </h1>
 
-      <p>
+      <!-- SUBTITLE -->
+      <p class="hero-subtitle">
         Smart Travel Starts with Great Deals
       </p>
 
       <!-- TRIP BUTTONS -->
-      <div class="trip-buttons">
+      <div class="trip-buttons d-flex justify-content-center">
 
-        <button class="trip-btn active">
-          Roundtrip
-        </button>
+        <div class="trip-switch d-inline-flex">
 
-        <button class="trip-btn">
-          Oneway
-        </button>
+          <button class="trip-btn active">
+            Roundtrip
+          </button>
+
+          <button class="trip-btn">
+            Oneway
+          </button>
+
+        </div>
 
       </div>
 
@@ -68,144 +86,147 @@
     <!-- SEARCH FORM -->
     <div class="search-wrapper">
 
-      <form id="flightForm">
+      <div class="row g-3 justify-content-center">
 
-        <div class="row g-3">
+        <!-- FROM -->
+        <div class="col-lg col-md-6">
 
-          <!-- FROM -->
-          <div class="col-lg col-md-6">
+          <div class="flight-input d-flex align-items-center">
 
-            <div class="flight-input">
-
-              <input
-                type="text"
-                id="from"
-                placeholder="Fly from"
-                required
-              >
-
-            </div>
-
-          </div>
-
-          <!-- TO -->
-          <div class="col-lg col-md-6">
-
-            <div class="flight-input">
-
-              <input
-                type="text"
-                id="to"
-                placeholder="Fly to"
-                required
-              >
-
-            </div>
-
-          </div>
-
-          <!-- DEPARTURE -->
-          <div class="col-lg col-md-6">
-
-            <div class="flight-input icon-box">
-
-              <input
-                type="date"
-                id="departure"
-                required
-              >
-
-              <i class="fa-solid fa-calendar-days"></i>
-
-            </div>
-
-          </div>
-
-          <!-- RETURN -->
-          <div class="col-lg col-md-6">
-
-            <div class="flight-input icon-box">
-
-              <input
-                type="date"
-                id="return"
-              >
-
-              <i class="fa-solid fa-calendar-days"></i>
-
-            </div>
-
-          </div>
-
-          <!-- PASSENGERS -->
-          <div class="col-lg col-md-6">
-
-            <div class="flight-input icon-box">
-
-              <select id="passengers">
-
-                <option>Passengers</option>
-                <option>1 Passenger</option>
-                <option>2 Passengers</option>
-                <option>3 Passengers</option>
-                <option>4+ Passengers</option>
-
-              </select>
-
-              <i class="fa-solid fa-user"></i>
-
-            </div>
+            <input
+              type="text"
+              placeholder="Fly from"
+              class="w-100 border-0"
+            >
 
           </div>
 
         </div>
 
-        <!-- NOTE -->
-        <p class="search-note">
+        <!-- TO -->
+        <div class="col-lg col-md-6">
 
-          After sending request,
-          We'll contact you for more details about Flight.
+          <div class="flight-input d-flex align-items-center">
 
-        </p>
+            <input
+              type="text"
+              placeholder="Fly to"
+              class="w-100 border-0"
+            >
 
-        <!-- BUTTON -->
-        <div class="text-center">
-
-          <button
-            type="submit"
-            class="search-btn"
-          >
-
-            Search for Flights
-
-            <span>
-              <i class="fa-solid fa-arrow-right"></i>
-            </span>
-
-          </button>
+          </div>
 
         </div>
 
-      </form>
+        <!-- DATE -->
+        <div class="col-lg col-md-6">
+
+          <div class="flight-input d-flex align-items-center justify-content-between">
+
+            <input
+              type="date"
+              class="w-100 border-0"
+            >
+
+            <i class="fa-solid fa-calendar-days"></i>
+
+          </div>
+
+        </div>
+
+        <!-- RETURN -->
+        <div class="col-lg col-md-6">
+
+          <div class="flight-input d-flex align-items-center justify-content-between">
+
+            <input
+              type="date"
+              class="w-100 border-0"
+            >
+
+            <i class="fa-solid fa-calendar-days"></i>
+
+          </div>
+
+        </div>
+
+        <!-- PASSENGERS -->
+        <div class="col-lg col-md-6">
+
+          <div class="flight-input d-flex align-items-center justify-content-between">
+
+            <select class="w-100 border-0">
+
+              <option>
+                Passengers
+              </option>
+
+              <option>
+                1 Passenger
+              </option>
+
+              <option>
+                2 Passengers
+              </option>
+
+              <option>
+                3 Passengers
+              </option>
+
+            </select>
+
+            <i class="fa-solid fa-user"></i>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- NOTE -->
+      <p class="search-note text-center">
+
+        * After sending request,
+        We'll contact you for more details
+        about Flight.
+
+      </p>
+
+      <!-- BUTTON -->
+      <div class="text-center">
+
+        <button class="search-btn d-inline-flex align-items-center">
+
+          Search for Flights
+
+          <span class="d-flex align-items-center justify-content-center">
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+          </span>
+
+        </button>
+
+      </div>
 
     </div>
 
     <!-- SOCIAL ICONS -->
-    <div class="hero-social">
+    <div class="hero-social position-absolute d-flex flex-column">
 
-      <a href="#">
+      <a href="#" class="social-icon d-flex align-items-center justify-content-center">
         <i class="fab fa-facebook-f"></i>
       </a>
 
-      <a href="#">
+      <a href="#" class="social-icon d-flex align-items-center justify-content-center">
         <i class="fab fa-linkedin-in"></i>
       </a>
 
-      <a href="#">
+      <a href="#" class="social-icon d-flex align-items-center justify-content-center">
         <i class="fab fa-twitter"></i>
       </a>
 
-      <a href="#">
+      <a href="#" class="social-icon d-flex align-items-center justify-content-center">
         <i class="fa-solid fa-phone"></i>
       </a>
 
@@ -215,6 +236,9 @@
 
 </section>
 
+<!-- =========================================
+     HERO SECTION END
+========================================= -->
 <!-- =========================
      HERO SECTION END
 ========================== -->

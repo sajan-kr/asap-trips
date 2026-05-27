@@ -435,188 +435,347 @@ select {
 
 /* ========================= FLIGHTS HERO Start========================== */
 
-.flights-hero {
-    position: relative;
-    background: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1400') center/cover no-repeat;
-    height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.flight-hero{
+  min-height:100vh;
+  background:#f4f4f4;
+  padding:120px 0 80px;
 }
 
-.flights-hero .overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.6);
+/* =========================================
+   HALF CIRCLE
+========================================= */
+
+.hero-circle{
+
+  width:850px;
+  height:420px;
+
+  top:70px;
+
+  background:linear-gradient(
+    to bottom,
+    #ef3d16 0%,
+    #f39b87 45%,
+    #ffffff 100%
+  );
+
+  border-top-left-radius:420px;
+  border-top-right-radius:420px;
+
+  z-index:1;
 }
 
-.flights-hero h1 {
-    font-size: 70px;
-    font-weight: 700;
-    margin-bottom: 20px;
+/* =========================================
+   PLANE IMAGE
+========================================= */
+
+.plane-image{
+  max-width:700px;
 }
 
-.flights-hero p {
-    font-size: 18px;
-    color: #ddd;
+.plane-image img{
+  width:100%;
 }
 
-/* =========================
-   FLIGHT SEARCH
-========================== */
+/* =========================================
+   TITLE
+========================================= */
 
-.flight-search-section {
-    margin-top: -70px;
-    position: relative;
-    z-index: 2;
+.hero-title{
+
+  font-size:95px;
+  letter-spacing:2px;
+  line-height:1;
+
+  margin-top:-20px;
+
+  background:linear-gradient(
+    to bottom,
+    #000000 0%,
+    #202020 40%,
+    #8d8d8d 75%,
+    #ffffff 100%
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+  text-shadow:
+    0 10px 20px rgba(0,0,0,0.10);
 }
 
-.flight-search-box {
-    background: #fff;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+/* =========================================
+   SUBTITLE
+========================================= */
+
+.hero-subtitle{
+  color:#555;
+  font-size:15px;
+  margin-top:12px;
 }
 
-.flight-search-box label {
-    font-weight: 600;
-    margin-bottom: 10px;
-    display: block;
+/* =========================================
+   TRIP BUTTONS
+========================================= */
+
+.trip-buttons{
+  margin-top:28px;
 }
 
-.search-input {
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 14px 15px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.trip-switch{
+
+  background:#fff;
+
+  border-radius:50px;
+
+  padding:5px;
+
+  border:1px solid #ececec;
+
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
 }
 
-.search-input input {
-    border: none;
-    width: 100%;
-    outline: none;
+.trip-btn{
+
+  border:none;
+  background:transparent;
+
+  padding:10px 24px;
+
+  border-radius:50px;
+
+  font-size:13px;
+  font-weight:500;
+
+  color:#555;
 }
 
-.search-flight-btn {
-    height: 56px;
-    border: none;
-    border-radius: 12px;
-    background: #ff5a3c;
-    color: #fff;
-    font-weight: 600;
-    transition: 0.3s;
+.trip-btn.active{
+  background:#ef3d16;
+  color:#fff;
 }
 
-.search-flight-btn:hover {
-    background: #e64626;
+/* =========================================
+   SEARCH FORM
+========================================= */
+
+.search-wrapper{
+  margin-top:55px;
+  position:relative;
+  z-index:5;
 }
 
-/* =========================
-   POPULAR DESTINATION
-========================== */
+/* =========================================
+   INPUT BOX
+========================================= */
 
-.popular-destination {
-    padding: 100px 0;
+.flight-input{
+
+  height:58px;
+
+  background:#fff;
+
+  border-radius:12px;
+
+  border:1px solid #ebebeb;
+
+  padding:0 18px;
 }
 
-.section-title {
-    margin-bottom: 50px;
+.flight-input input,
+.flight-input select{
+
+  outline:none;
+  background:transparent;
+
+  font-size:14px;
 }
 
-.section-title h2 {
-    font-size: 45px;
-    font-weight: 700;
+.flight-input i{
+  color:#777;
+  font-size:14px;
 }
 
-.section-title p {
-    color: #777;
+/* =========================================
+   NOTE
+========================================= */
+
+.search-note{
+  color:#999;
+  font-size:13px;
+  margin:22px 0;
 }
 
-.destination-card {
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
+/* =========================================
+   BUTTON
+========================================= */
+
+.search-btn{
+
+  border:none;
+
+  background:#111;
+
+  color:#fff;
+
+  padding:15px 28px;
+
+  border-radius:50px;
+
+  gap:14px;
+
+  font-size:14px;
+  font-weight:500;
 }
 
-.destination-card img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    transition: 0.5s;
+.search-btn span{
+
+  width:30px;
+  height:30px;
+
+  border-radius:50%;
+
+  background:#fff;
+
+  color:#111;
+
+  font-size:12px;
 }
 
-.destination-card:hover img {
-    transform: scale(1.1);
+/* =========================================
+   SOCIAL ICONS
+========================================= */
+
+.hero-social{
+
+  right:30px;
+  top:50%;
+
+  transform:translateY(-50%);
+
+  gap:14px;
+
+  z-index:10;
 }
 
-.destination-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px;
-    background: linear-gradient(transparent,
-            rgba(0, 0, 0, 0.8));
-    color: #fff;
+.social-icon{
+
+  width:42px;
+  height:42px;
+
+  border-radius:50%;
+
+  background:#fff;
+
+  border:1px solid #ddd;
+
+  color:#111;
+
+  text-decoration:none;
 }
 
-.destination-content h4 {
-    font-size: 28px;
-    font-weight: 700;
-}
-
-.destination-content p {
-    margin: 0;
-    color: #ddd;
-}
-
-/* =========================
+/* =========================================
    RESPONSIVE
-========================== */
+========================================= */
 
-@media(max-width:991px) {
+@media(max-width:991px){
 
-    .flights-hero h1 {
-        font-size: 50px;
-    }
+  .hero-circle{
 
-    .flight-search-box {
-        padding: 25px;
-    }
+    width:650px;
+    height:320px;
 
-}
+    border-top-left-radius:320px;
+    border-top-right-radius:320px;
+  }
 
-@media(max-width:576px) {
+  .hero-title{
+    font-size:65px;
+  }
 
-    .flights-hero {
-        height: 60vh;
-    }
-
-    .flights-hero h1 {
-        font-size: 38px;
-    }
-
-    .flights-hero p {
-        font-size: 15px;
-    }
-
-    .flight-search-section {
-        margin-top: -40px;
-    }
-
-    .flight-search-box {
-        padding: 20px;
-    }
-
-    .section-title h2 {
-        font-size: 32px;
-    }
+  .plane-image{
+    max-width:520px;
+  }
 
 }
 
+@media(max-width:768px){
+
+  .flight-hero{
+    padding:100px 0 70px;
+  }
+
+  .hero-circle{
+
+    width:520px;
+    height:260px;
+
+    border-top-left-radius:260px;
+    border-top-right-radius:260px;
+  }
+
+  .hero-title{
+    font-size:50px;
+  }
+
+  .plane-image{
+    max-width:420px;
+  }
+
+  .hero-social{
+
+    position:relative !important;
+
+    flex-direction:row !important;
+
+    justify-content:center;
+
+    right:auto;
+    top:auto;
+
+    transform:none;
+
+    margin-top:40px;
+  }
+
+}
+
+@media(max-width:576px){
+
+  .hero-circle{
+
+    width:360px;
+    height:180px;
+
+    border-top-left-radius:180px;
+    border-top-right-radius:180px;
+
+    top:90px;
+  }
+
+  .hero-title{
+    font-size:38px;
+    margin-top:0;
+  }
+
+  .plane-image{
+    max-width:320px;
+  }
+
+  .trip-btn{
+    padding:9px 18px;
+    font-size:12px;
+  }
+
+  .search-btn{
+    width:100%;
+    justify-content:center;
+  }
+
+}
 /* ========================= FLIGHTS HERO Close ========================== */
 
