@@ -453,9 +453,9 @@ select {
     z-index: 1;
 
     /* Yellow outline */
-    border: 10px solid rgb(255, 187, 0);
+    /* border: 10px solid rgb(255, 187, 0);
     border-bottom: none;
-    box-sizing: border-box;
+    box-sizing: border-box; */
 }
 
 /* ========== PLANE IMAGE ============ */
