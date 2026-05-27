@@ -1,0 +1,368 @@
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:Arial, sans-serif;
+      background:#f5f5f5;
+    }
+
+    /* =========================
+       NAVBAR
+    ========================== */
+
+    .custom-navbar{
+      background:#000;
+      padding:14px 0;
+      position:sticky;
+      top:0;
+      z-index:999;
+      transition:0.3s;
+    }
+
+    .custom-navbar.scrolled{
+      padding:10px 0;
+      box-shadow:0 4px 20px rgba(0,0,0,0.2);
+    }
+
+    /* LOGO */
+
+    .navbar-brand img{
+      height:30px;
+      object-fit:contain;
+    }
+
+    /* MENU */
+
+    .navbar-nav{
+      gap:22px;
+    }
+
+    .navbar-nav .nav-link{
+      color:#b8b8b8;
+      font-size:13px;
+      font-weight:500;
+      transition:0.3s;
+      position:relative;
+    }
+
+    .navbar-nav .nav-link:hover{
+      color:#fff;
+    }
+
+    .navbar-nav .nav-link.active{
+      color:#ff5a2c;
+    }
+
+    /* UNDERLINE EFFECT */
+
+    .navbar-nav .nav-link::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-6px;
+      width:0;
+      height:2px;
+      background:#ff5a2c;
+      transition:0.3s;
+    }
+
+    .navbar-nav .nav-link:hover::after{
+      width:100%;
+    }
+
+    /* CONTACT BUTTON */
+
+    .contact-btn{
+      border:none;
+      background:#fff;
+      color:#000;
+      border-radius:50px;
+      padding:10px 18px;
+      font-size:12px;
+      font-weight:600;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      transition:0.3s;
+    }
+
+    .contact-btn:hover{
+      transform:translateY(-2px);
+    }
+
+    .contact-btn i{
+      width:18px;
+      height:18px;
+      background:#000;
+      color:#fff;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:10px;
+    }
+
+    /* MOBILE MENU */
+
+    .navbar-toggler{
+      border:none;
+      box-shadow:none !important;
+    }
+
+    .navbar-toggler i{
+      color:#fff;
+      font-size:24px;
+    }
+
+    /* MOBILE RESPONSIVE */
+
+    @media(max-width:991px){
+
+      .navbar-collapse{
+        background:#111;
+        margin-top:15px;
+        padding:20px;
+        border-radius:16px;
+      }
+
+      .navbar-nav{
+        gap:12px;
+      }
+
+      .contact-btn{
+        margin-top:15px;
+      }
+
+    }
+
+    /* DEMO SECTION */
+
+    .hero{
+      height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)),
+      url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+
+      background-size:cover;
+      background-position:center;
+      color:#fff;
+      text-align:center;
+    }
+
+    .hero h1{
+      font-size:60px;
+      font-weight:700;
+    }
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:38px;
+      }
+
+    }
+
+        .footer-section{
+      position:relative;
+      background:#0b0b0d;
+      color:#fff;
+      overflow:hidden;
+      padding:80px 0 30px;
+    }
+
+    /* Decorative Circles */
+    .footer-section::before{
+      content:"";
+      position:absolute;
+      top:-90px;
+      right:-90px;
+      width:220px;
+      height:220px;
+      border:35px solid #d9d9d9;
+      border-radius:50%;
+      opacity:0.9;
+    }
+
+    .footer-section::after{
+      content:"";
+      position:absolute;
+      bottom:-70px;
+      left:-70px;
+      width:180px;
+      height:180px;
+      border:30px solid #8f8f8f;
+      border-radius:50%;
+      opacity:0.5;
+    }
+
+    .footer-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .footer-title h2{
+      font-size:42px;
+      font-weight:600;
+      line-height:1.2;
+      margin-bottom:15px;
+    }
+
+    .footer-title p{
+      color:#9c9c9c;
+      font-size:14px;
+      max-width:500px;
+      margin:auto;
+      line-height:1.8;
+    }
+
+    .footer-divider{
+      border-color:rgba(255,255,255,0.08);
+      margin:0 0 50px;
+    }
+
+    .footer-heading{
+      color:#f7f7f7;
+      font-size:15px;
+      font-weight:400;
+      letter-spacing:1px;
+      margin-bottom:20px;
+      text-transform:uppercase;
+    }
+
+    .footer-links{
+      list-style:none;
+      padding:0;
+      margin:0;
+    }
+
+    .footer-links li{
+      margin-bottom:12px;
+    }
+
+    .footer-links a{
+      text-decoration:none;
+      color:#fff;
+      font-size:14px;
+      transition:0.3s;
+    }
+
+    .footer-links a:hover{
+      color:#ff4d4d;
+      padding-left:5px;
+    }
+
+    .contact-info p{
+      margin-bottom:12px;
+      font-size:14px;
+      color:#fff;
+    }
+
+    .footer-bottom{
+      border-top:1px solid rgba(255,255,255,0.08);
+      margin-top:50px;
+      padding-top:30px;
+    }
+
+    .footer-logo{
+      font-size:28px;
+      font-weight:bold;
+      color:#fff;
+    }
+
+    .footer-logo span{
+      color:#ff4d4d;
+    }
+
+    .copyright{
+      color:#8b8b8b;
+      font-size:13px;
+      text-align:center;
+    }
+
+    .social-icons{
+      display:flex;
+      gap:12px;
+      justify-content:end;
+    }
+
+    .social-icons a{
+      width:38px;
+      height:38px;
+      border:1px solid rgba(255,255,255,0.2);
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    .social-icons a:hover{
+      background:#fff;
+      color:#000;
+      transform:translateY(-3px);
+    }
+
+    /* Responsive */
+    @media(max-width:991px){
+
+      .footer-title h2{
+        font-size:34px;
+      }
+
+      .footer-column{
+        margin-bottom:35px;
+      }
+
+      .social-icons{
+        justify-content:center;
+        margin-top:20px;
+      }
+
+      .footer-logo{
+        text-align:center;
+        margin-bottom:15px;
+      }
+
+      .copyright{
+        margin-bottom:15px;
+      }
+    }
+
+    @media(max-width:576px){
+
+      .footer-section{
+        padding:60px 0 25px;
+      }
+
+      .footer-title h2{
+        font-size:28px;
+      }
+
+      .footer-title p{
+        font-size:13px;
+      }
+
+      .footer-links a,
+      .contact-info p{
+        font-size:13px;
+      }
+
+      .footer-section::before{
+        width:150px;
+        height:150px;
+      }
+
+      .footer-section::after{
+        width:120px;
+        height:120px;
+      }
+    }
