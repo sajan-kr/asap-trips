@@ -451,6 +451,9 @@ select {
     border-top-left-radius: 420px;
     border-top-right-radius: 420px;
     z-index: 1;
+    border: 0px solid rgb(173, 110, 50);
+    border-bottom: none;
+    box-sizing: border-box;
 }
 
 /* ========== PLANE IMAGE ============ */
