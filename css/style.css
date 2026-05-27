@@ -366,3 +366,193 @@
         height:120px;
       }
     }
+
+    /* =========================
+   FLIGHTS HERO
+========================== */
+
+.flights-hero{
+  position:relative;
+  background:url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1400')
+  center/cover no-repeat;
+  height:70vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+}
+
+.flights-hero .overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+}
+
+.flights-hero h1{
+  font-size:70px;
+  font-weight:700;
+  margin-bottom:20px;
+}
+
+.flights-hero p{
+  font-size:18px;
+  color:#ddd;
+}
+
+/* =========================
+   FLIGHT SEARCH
+========================== */
+
+.flight-search-section{
+  margin-top:-70px;
+  position:relative;
+  z-index:2;
+}
+
+.flight-search-box{
+  background:#fff;
+  padding:40px;
+  border-radius:20px;
+  box-shadow:0 10px 40px rgba(0,0,0,0.1);
+}
+
+.flight-search-box label{
+  font-weight:600;
+  margin-bottom:10px;
+  display:block;
+}
+
+.search-input{
+  border:1px solid #ddd;
+  border-radius:12px;
+  padding:14px 15px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.search-input input{
+  border:none;
+  width:100%;
+  outline:none;
+}
+
+.search-flight-btn{
+  height:56px;
+  border:none;
+  border-radius:12px;
+  background:#ff5a3c;
+  color:#fff;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.search-flight-btn:hover{
+  background:#e64626;
+}
+
+/* =========================
+   POPULAR DESTINATION
+========================== */
+
+.popular-destination{
+  padding:100px 0;
+}
+
+.section-title{
+  margin-bottom:50px;
+}
+
+.section-title h2{
+  font-size:45px;
+  font-weight:700;
+}
+
+.section-title p{
+  color:#777;
+}
+
+.destination-card{
+  border-radius:20px;
+  overflow:hidden;
+  position:relative;
+}
+
+.destination-card img{
+  width:100%;
+  height:400px;
+  object-fit:cover;
+  transition:0.5s;
+}
+
+.destination-card:hover img{
+  transform:scale(1.1);
+}
+
+.destination-content{
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  padding:30px;
+  background:linear-gradient(
+    transparent,
+    rgba(0,0,0,0.8)
+  );
+  color:#fff;
+}
+
+.destination-content h4{
+  font-size:28px;
+  font-weight:700;
+}
+
+.destination-content p{
+  margin:0;
+  color:#ddd;
+}
+
+/* =========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:991px){
+
+  .flights-hero h1{
+    font-size:50px;
+  }
+
+  .flight-search-box{
+    padding:25px;
+  }
+
+}
+
+@media(max-width:576px){
+
+  .flights-hero{
+    height:60vh;
+  }
+
+  .flights-hero h1{
+    font-size:38px;
+  }
+
+  .flights-hero p{
+    font-size:15px;
+  }
+
+  .flight-search-section{
+    margin-top:-40px;
+  }
+
+  .flight-search-box{
+    padding:20px;
+  }
+
+  .section-title h2{
+    font-size:32px;
+  }
+
+}
