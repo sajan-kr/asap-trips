@@ -37,3 +37,21 @@ window.addEventListener("scroll", function () {
   }
 
 });
+
+
+//  banner trip button active state
+const tripBtns = document.querySelectorAll(".trip-btn");
+
+tripBtns.forEach(btn => {
+
+    btn.addEventListener("click", () => {
+
+        tripBtns.forEach(b => b.classList.remove("active"));
+
+        btn.classList.add("active");
+
+    });
+
+});
+
+// search flight button click event

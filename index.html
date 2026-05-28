@@ -85,8 +85,19 @@
 
                         <div class="flight-input d-flex align-items-center">
 
-                            <input type="text" placeholder="Fly from" class="w-100 border-0">
+                            <input type="text" placeholder="Fly from" class="w-100 border-0" list="fromCities">
+                            <datalist id="fromCities">
 
+                                <option value="Delhi"></option>
+                                <option value="Mumbai"></option>
+                                <option value="Dubai"></option>
+                                <option value="London"></option>
+                                <option value="Toronto"></option>
+                                <option value="Singapore"></option>
+                                <option value="Paris"></option>
+                                <option value="Sydney"></option>
+
+                            </datalist>
                         </div>
 
                     </div>
@@ -96,8 +107,18 @@
 
                         <div class="flight-input d-flex align-items-center">
 
-                            <input type="text" placeholder="Fly to" class="w-100 border-0">
+                            <input type="text" placeholder="Fly to" class="w-100 border-0" list="toCities">
 
+                            <datalist id="toCities">
+
+                                <option value="Tokyo"></option>
+                                <option value="Rome"></option>
+                                <option value="Berlin"></option>
+                                <option value="Chicago"></option>
+                                <option value="Doha"></option>
+                                <option value="Amsterdam"></option>
+
+                            </datalist>
                         </div>
 
                     </div>
@@ -173,7 +194,7 @@
                 <!-- BUTTON -->
                 <div class="text-center">
 
-                    <button class="search-btn d-inline-flex align-items-center">
+                    <button id="searchFlightBtn" class="search-btn d-inline-flex align-items-center">
 
                         Search for Flights
 
