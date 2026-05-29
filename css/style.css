@@ -230,6 +230,26 @@ select {
 
 }
 
+/* =========================
+   STICKY HEADER
+========================= */
+
+.custom-navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    /* background: #fff; */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: transform 0.4s ease;
+}
+
+/* Hide Navbar */
+.navbar-hide{
+    transform: translateY(-100%);
+}
+
 /* ======  NAVBAR Close ====== */
 
 /* ====== Footer Start ====== */
@@ -439,6 +459,7 @@ select {
     min-height: 100vh;
     background: #ffffff;
     padding: 120px 0 80px;
+    margin-top: 50px;
 }
 
 /* ======== HALF CIRCLE ========== */
