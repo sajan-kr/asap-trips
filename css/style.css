@@ -115,7 +115,7 @@ select {
 }
 
 .navbar-nav .nav-link.active {
-    color: #ff5a2c;
+    color: #DF3D1C;
 }
 
 /* UNDERLINE EFFECT */
@@ -127,7 +127,7 @@ select {
     bottom: -6px;
     width: 0;
     height: 2px;
-    background: #ff5a2c;
+    background: #DF3D1C;
     transition: 0.3s;
 }
 
@@ -230,9 +230,9 @@ select {
 
 }
 
-/* =========================  NAVBAR Close ========================== */
+/* ======  NAVBAR Close ====== */
 
-/* =========================  Footer Start ========================== */
+/* ====== Footer Start ====== */
 .footer-section {
     position: relative;
     background: #0b0b0d;
@@ -318,7 +318,7 @@ select {
 }
 
 .footer-links a:hover {
-    color: #ff4d4d;
+    color: #DF3D1C;
     padding-left: 5px;
 }
 
@@ -341,7 +341,7 @@ select {
 }
 
 .footer-logo span {
-    color: #ff4d4d;
+    color: #DF3D1C;
 }
 
 .copyright {
@@ -447,15 +447,10 @@ select {
     width: 850px;
     height: 420px;
     top: 70px;
-    background: linear-gradient(to bottom, #ef3d16 0%, #f39b87 45%, #ffffff 100%);
+    background: linear-gradient(to bottom, #DF3D1C 0%, #f39b87 45%, #ffffff 100%);
     border-top-left-radius: 420px;
     border-top-right-radius: 420px;
     z-index: 1;
-
-    /* Yellow outline */
-    /* border: 10px solid rgb(255, 187, 0);
-    border-bottom: none;
-    box-sizing: border-box; */
 }
 
 /* ========== PLANE IMAGE ============ */
@@ -514,7 +509,7 @@ select {
 }
 
 .trip-btn.active {
-    background: #ef3d16;
+    background: #DF3D1C;
     color: #fff;
 }
 
@@ -597,10 +592,6 @@ select {
     color: #111;
     text-decoration: none;
 }
-
-/* =========================================
-   RESPONSIVE
-========================================= */
 
 @media(max-width:991px) {
 
@@ -685,5 +676,345 @@ select {
 
 }
 
-/* ========================= FLIGHTS HERO Close ========================== */
+/* ====== FLIGHTS HERO Close ===== */
+/* ===== SECTION WRAPPER Start ====== */
+.why-choose-us {
+    background: #050505;
+    color: #fff;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    padding: 70px 0;
+}
 
+/* ====== SMALL TITLE ====== */
+.small-title {
+    color: #DF3D1C;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.small-title i {
+    font-size: 8px;
+    margin-right: 5px;
+}
+
+/* ====== MAIN TITLE ===== */
+.main-title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* ======= DESCRIPTION ======= */
+.section-desc {
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 400px;
+}
+
+/* ====== BUTTON ======= */
+.know-more-btn {
+    padding: 10px 22px;
+    margin-top: 10px;
+}
+
+/* ======== FLIGHT PATH CONTAINER ======== */
+.flight-path {
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    height: 420px;
+    pointer-events: none;
+}
+
+/* SVG FULL WIDTH */
+.flight-path svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* ====== FLIGHT ROUTE LINE ======= */
+.flight-path path {
+    fill: none;
+    stroke: #DF3D1C;
+    stroke-width: 3;
+
+    /* Glow Effect */
+    filter: drop-shadow(0 0 12px rgba(255, 90, 54, .8));
+}
+
+.arrow-line-red-icon {
+    position: absolute;
+    bottom: -42px;
+    left: 16px;
+    width: 30.5%;
+}
+
+.circle-icon {
+    position: absolute;
+    bottom: -72px;
+    left: -12px;
+}
+
+.circle-icon0-second-circle {
+    position: absolute;
+    bottom: 36px;
+    left: 30%;
+}
+
+/* ======  AIRPLANE ICON ===== */
+.plane-icon {
+    position: absolute;
+    left: 25%;
+    top: 71%;
+    font-size: 40px;
+    z-index: 999999;
+    color: rgb(255, 255, 255);
+    transform: rotate(10deg);
+    text-shadow: rgba(255, 255, 255, 0.7) 0px 0px 10px, rgba(255, 255, 255, 0.4) 0px 0px 20px;
+}
+
+img.white-line-arrow {
+    position: absolute;
+    top: 6px;
+    right: 0;
+    width: 69%;
+    z-index: 0;
+}
+
+/* ======= FEATURES SECTION ======= */
+.feature-row {
+    margin-top: 185px;
+}
+
+.second-feature-box {
+    position: absolute;
+    top: -100px;
+    left: -24px;
+}
+
+.third-feature-box {
+    position: absolute;
+    top: -270px;
+    left: -34px;
+}
+
+.third-feature-box h2,
+.third-feature-box h4,
+.third-feature-box p {
+    color: #313131 !important;
+}
+
+/* ====== FEATURE BOX ======= */
+.feature-box {
+    position: relative;
+    z-index: 5;
+}
+
+/* Feature Number */
+.feature-box h2 {
+    color: #DF3D1C;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* Feature Title */
+.feature-box h4 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Feature Description */
+.feature-box p {
+    color: rgba(255, 255, 255, .65);
+    line-height: 1.7;
+    max-width: 280px;
+}
+
+/* ======  RESPONSIVE DESIGN ====== */
+@media (max-width: 991px) {
+
+    .main-title {
+        font-size: 34px;
+    }
+
+    .feature-row {
+        margin-top: 180px;
+        row-gap: 40px;
+    }
+
+    .plane-icon {
+        left: 45%;
+        top: 60%;
+        font-size: 30px;
+    }
+
+    .flight-path {
+        height: 250px;
+    }
+}
+
+/* ==== SECTION WRAPPER Close ==== */
+
+/* ===== Flight Deals Sectionv Start ===== */
+
+/* ====== Main Section ====== */
+.deals-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+}
+
+.deals-section .col-lg-3 {
+    padding: 0 24px;
+}
+
+/* ==== Small Deals Badge ==== */
+.deal-badge {
+    color: #DF3D1C;
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.deal-badge i {
+    font-size: 8px;
+}
+
+/* ====== Main Heading ====== */
+.deals-section .main-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #111;
+    line-height: 1.2;
+}
+
+/* Description Text */
+.deals-section .sub-text {
+    max-width: 420px;
+    margin: auto;
+    color: #777;
+    font-size: 14px;
+}
+
+/* ======== Flight Card ======= */
+
+.deals-section .flight-card {
+    position: relative;
+}
+
+/* ======= Image Wrapper ====== */
+
+.flight-image {
+    padding: 10px;
+    border-radius: 35px;
+}
+
+/* Card Image */
+.deals-section .flight-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 28px;
+}
+
+/* ======= Route Section ======= */
+
+.deals-section .flight-route {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.deals-section .flight-route h6 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.deals-section .flight-route span {
+    color: #888;
+    font-size: 11px;
+}
+
+/* Center Arrow */
+.deals-section .route-arrow {
+    color: #777;
+    font-size: 13px;
+}
+
+/* ===== Airline + Duration ====== */
+
+.deals-section .flight-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    font-size: 11px;
+}
+
+.deals-section .trip-type {
+    color: #DF3D1C;
+    font-weight: 600;
+}
+
+/* ======= Book Button ====== */
+
+.deals-section .book-btn {
+    width: 100%;
+    margin-top: 15px;
+    border: none;
+    background: #111;
+    color: #fff;
+    padding: 10px 12px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    transition: .3s;
+}
+
+/* White Circle */
+.deals-section .book-btn span {
+    width: 24px;
+    height: 24px;
+    background: #fff;
+    color: #111;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+}
+
+/* Hover Effect */
+.deals-section .book-btn:hover {
+    background: #DF3D1C;
+}
+
+/* ====== Responsive ======= */
+
+@media (max-width: 991px) {
+
+    .deals-section .main-title {
+        font-size: 34px;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .deals-section .main-title {
+        font-size: 28px;
+    }
+
+}
+
+/* ======  Flight Deals Sectionv Close ====== */
