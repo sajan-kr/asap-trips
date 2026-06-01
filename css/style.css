@@ -234,19 +234,19 @@ select {
    STICKY HEADER
 ========================= */
 
-.custom-navbar{
+.custom-navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 9999;
     /* background: #fff; */
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     transition: transform 0.4s ease;
 }
 
 /* Hide Navbar */
-.navbar-hide{
+.navbar-hide {
     transform: translateY(-100%);
 }
 
@@ -1039,3 +1039,386 @@ img.white-line-arrow {
 }
 
 /* ======  Flight Deals Sectionv Close ====== */
+
+/* ==========================================
+   MAIN SECTION
+========================================== */
+
+.travel-feature-section {
+    min-height: 100vh;
+    background: #080808;
+    color: #fff;
+    padding: 100px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Small Heading */
+.travel-feature-section .sub-title {
+    color: #ff6b3d;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Main Heading */
+.travel-feature-section .main-title {
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+/* Description */
+.travel-feature-section .description {
+    color: #9f9f9f;
+    margin-bottom: 35px;
+}
+
+/* Feature Card */
+.travel-feature-section .feature-box {
+    background: #171717;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Icon Circle */
+.travel-feature-section .feature-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+/* Colors */
+.travel-feature-section .green {
+    background: #53c44e;
+}
+
+.travel-feature-section .blue {
+    background: #4058ff;
+}
+
+.travel-feature-section .purple {
+    background: #bb3df6;
+}
+
+/* Feature Title */
+.travel-feature-section .feature-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Feature Text */
+.travel-feature-section .feature-text {
+    color: #9e9e9e;
+}
+
+/* Button */
+.travel-feature-section .know-btn {
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+.travel-feature-section .know-btn span {
+    width: 30px;
+    height: 30px;
+    background: #000;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Right Image Area */
+.travel-feature-section .image-wrapper {
+    position: relative;
+}
+
+.travel-feature-section .main-image {
+    width: 100%;
+    /* max-width: 420px; */
+    border-radius: 16px;
+}
+
+.travel-feature-section .experience-badge {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.travel-feature-section .airplane {
+    position: absolute;
+    bottom: -40px;
+    left: -40px;
+    width: 500px;
+}
+
+/* Responsive */
+@media(max-width:991px) {
+
+    .travel-feature-section .main-title {
+        font-size: 38px;
+    }
+
+    .travel-feature-section .image-wrapper {
+        margin-top: 50px;
+    }
+
+    .travel-feature-section .airplane {
+        width: 320px;
+        left: 0;
+    }
+
+}
+
+/* Popular Routes Section Start */
+
+.ph-route-booking-section .ph-slider-nav{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    margin-top:35px;
+}
+
+.ph-route-booking-section .ph-prev,
+.ph-route-booking-section .ph-next{
+    width:34px;
+    height:34px;
+    border:none;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:all .3s ease;
+}
+
+.ph-route-booking-section .ph-prev{
+    background:#b7b7b7;
+    color:#fff;
+}
+
+.ph-route-booking-section .ph-next{
+    background:#000;
+    color:#fff;
+}
+
+/* Swiper Disabled State */
+
+.ph-route-booking-section .swiper-button-disabled{
+    background:#b7b7b7 !important;
+    color:#fff !important;
+    opacity:1 !important;
+    cursor:not-allowed;
+}
+
+/* Active State */
+
+.ph-route-booking-section .ph-prev:not(.swiper-button-disabled),
+.ph-route-booking-section .ph-next:not(.swiper-button-disabled){
+    background:#000;
+    color:#fff;
+}
+
+/* ===== SECTION ==== */
+
+.ph-route-booking-section {
+    padding: 100px 0;
+    background: #f7f7f7;
+}
+
+/* ======  HEADING ===== */
+
+.ph-route-booking-title {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+.ph-route-booking-description {
+    max-width: 500px;
+    margin: 0 auto 35px;
+    color: #7b7b7b;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* ====== TABS =====*/
+
+.ph-route-tabs {
+    display: inline-flex;
+    padding: 4px;
+    background: #fff;
+    border: 1px solid #DF3D1C8C;
+    border-radius: 50px;
+}
+
+.ph-route-tabs .nav-link {
+    border: none;
+    border-radius: 50px;
+    padding: 10px 22px;
+    color: #111;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.ph-route-tabs .nav-link.active {
+    background: #000 !important;
+    color: #fff !important;
+}
+
+/* ======= SLIDER ====== */
+
+.airlineSwiper,
+.routeSwiper {
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.ph-card {
+    background: #f2f2f2;
+    border-radius: 14px;
+    padding: 24px;
+    min-height: 210px;
+    transition: all .3s ease;
+}
+
+.ph-card:hover {
+    transform: translateY(-4px);
+}
+
+.ph-number {
+    width: 32px;
+    height: 32px;
+    background: #ef4b2f;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.ph-card h5 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.ph-card p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.ph-card a{
+    margin-top:auto;
+    color:#ef4b2f;
+    font-size:13px;
+    font-weight:500;
+    text-decoration:none;
+}
+
+.ph-card a:hover {
+    color: #d53f26;
+}
+
+/* ==========================================
+   NAVIGATION
+========================================== */
+
+.ph-slider-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 35px;
+}
+
+.ph-prev,
+.ph-next {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.ph-prev {
+    background: #bdbdbd;
+    color: #fff;
+}
+
+.ph-next {
+    background: #000;
+    color: #fff;
+}
+
+/* Swiper Disabled */
+
+.swiper-button-disabled {
+    background: #bdbdbd !important;
+    color: #fff !important;
+    opacity: 1 !important;
+    cursor: not-allowed;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 991px) {
+
+    .ph-route-booking-title {
+        font-size: 46px;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .ph-route-booking-section {
+        padding: 70px 0;
+    }
+
+    .ph-route-booking-title {
+        font-size: 34px;
+    }
+
+    .ph-card {
+        min-height: auto;
+    }
+
+}
+
+/* Popular Routes Section Close */
