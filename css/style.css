@@ -1593,7 +1593,7 @@ img.white-line-arrow {
     background: #fff;
     color: #000;
     position: absolute;
-    top: 50%;
+    top: 35%;
     transform: translateY(-50%);
     z-index: 10;
     cursor: pointer;
@@ -1787,3 +1787,186 @@ img.white-line-arrow {
 }
 
 /* Travel Offer Section Close */
+
+/* Home page Close */
+
+/* Flights page start */
+
+/* Hero search Start */
+.asap-flights-page {
+    background: #f5f5f5;
+    padding-bottom: 80px;
+}
+
+/* HERO */
+
+.asap-flights-page .asap-flight-hero {
+    background: #050505;
+    padding: 120px 0 180px;
+    position: relative;
+    overflow: hidden;
+}
+
+.asap-flights-page .asap-flight-hero::before {
+    content: "";
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    background: rgba(229,57,53,.20);
+    border-radius: 50%;
+    right: -200px;
+    top: -200px;
+    filter: blur(100px);
+}
+
+/* Badge */
+
+.asap-flights-page .asap-flight-badge {
+    color: #DF3D1C;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Title */
+
+.asap-flights-page .asap-flight-title {
+    color: #fff;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 20px 0;
+}
+
+/* Description */
+
+.asap-flights-page .asap-flight-desc {
+    color: #a4a4a4;
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 500px;
+}
+
+/* Plane */
+
+.asap-flights-page .asap-plane-wrapper {
+    position: relative;
+}
+
+.asap-flights-page .asap-glow {
+    width: 400px;
+    height: 400px;
+    background: #DF3D1C;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    filter: blur(120px);
+    opacity: .25;
+    transform: translate(-50%, -50%);
+}
+
+.asap-flights-page .asap-plane-img {
+    position: relative;
+    z-index: 2;
+    border-radius: 20px;
+}
+
+/* SEARCH BOX */
+
+.asap-flights-page .asap-search-box {
+    background: #fff;
+    margin-top: -90px;
+    position: relative;
+    z-index: 100;
+    padding: 35px;
+    border-radius: 25px;
+    box-shadow: 0 15px 50px rgba(0,0,0,.12);
+}
+
+/* Tabs */
+
+.asap-flights-page .asap-trip-tabs {
+    margin-bottom: 30px;
+}
+
+.asap-flights-page .asap-trip-tabs .nav-link {
+    border-radius: 50px;
+    color: #222;
+    padding: 12px 25px;
+    margin-right: 10px;
+    border: 1px solid #eee;
+}
+
+.asap-flights-page .asap-trip-tabs .nav-link.active {
+    background: #DF3D1C;
+    border-color: #DF3D1C;
+    color: #fff;
+}
+
+/* Fields */
+
+.asap-flights-page .asap-field {
+    background: #f8f8f8;
+    border-radius: 15px;
+    padding: 12px 15px;
+}
+
+.asap-flights-page .asap-field label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #777;
+}
+
+.asap-flights-page .asap-field .form-control {
+    border: none;
+    background: transparent;
+    padding: 0;
+    font-size: 16px;
+}
+
+.asap-flights-page .asap-field .form-control:focus {
+    box-shadow: none;
+}
+
+/* Swap Button */
+
+.asap-flights-page .asap-swap-btn {
+    width: 55px;
+    height: 55px;
+    border: none;
+    border-radius: 50%;
+    background: #DF3D1C;
+    color: #fff;
+    margin-top: 12px;
+}
+
+/* Search Button */
+
+.asap-flights-page .asap-search-btn {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 15px;
+    background: #DF3D1C;
+    color: #fff;
+    font-size: 20px;
+}
+
+/* Responsive */
+
+@media(max-width:991px){
+
+    .asap-flights-page .asap-flight-title{
+        font-size:48px;
+    }
+
+    .asap-flights-page .asap-search-box{
+        margin-top:-50px;
+    }
+
+}
+
+/* Hero search Close */
