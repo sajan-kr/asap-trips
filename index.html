@@ -947,7 +947,111 @@
 
     </section>
     <!-- Popular Routes Section Close -->
+    <!-- TESTIMONIAL SECTION START  -->
+    <section class="testimonial-section">
 
+        <div class="container">
+
+            <!-- Heading -->
+            <div class="testimonial-header text-center">
+
+                <span class="testimonial-tag d-flex align-items-center justify-content-center">
+                    <img src="images/dealscircle.png" alt="Badge Icon" class="me-05 img-fluid">
+                    Testimonials
+                </span>
+
+                <h2 class="testimonial-title">
+                    Trusted by <br>
+                    Thousands of Travelers
+                </h2>
+
+                <p class="testimonial-desc">
+                    Hear directly from our customers about their experiences with our pricing,
+                    reliability, and easy booking process.
+                </p>
+
+            </div>
+
+            <!-- Review Content -->
+            <div class="testimonial-review">
+
+                <span class="quote-left">❝</span>
+
+                <div class="line-top"></div>
+
+                <p id="testimonialText" class="testimonial-text">
+                    This trip was an unforgettable experience! Everything was seamless,
+                    and the personalized touch made it extra special.
+                    I can't wait for my next journey!
+                </p>
+
+                <div class="line-bottom"></div>
+
+                <span class="quote-right">❞</span>
+
+            </div>
+
+            <!-- Slider -->
+            <div class="testimonial-slider-wrapper">
+
+                <div class="custom-prev">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </div>
+
+                <div class="swiper testimonialSwiper">
+
+                    <div class="swiper-wrapper">
+
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide"
+                            data-text="This trip was an unforgettable experience! Everything was seamless and the personalized touch made it extra special.">
+
+                            <div class="testimonial-card">
+                                <img src="images/user1.png" alt="">
+                            </div>
+
+                            <h5>Nicola Maid</h5>
+
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide"
+                            data-text="The booking process was simple and quick. Their support team helped me every step of the way.">
+
+                            <div class="testimonial-card active-card">
+                                <img src="images/user2.png" alt="">
+                            </div>
+
+                            <h5>James Carlo</h5>
+
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide"
+                            data-text="Best travel service I have used. Affordable pricing and excellent support.">
+
+                            <div class="testimonial-card">
+                                <img src="images/user3.png" alt="">
+                            </div>
+
+                            <h5>Jhennefur</h5>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="custom-next">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- TESTIMONIAL SECTION Close  -->
     <!-- FOOTER -->
     <div id="footer"></div>
 
@@ -1032,7 +1136,55 @@
 
         });
     </script>
+    
     <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const swiper = new Swiper(".testimonialSwiper", {
+
+                slidesPerView: 3,
+                centeredSlides: true,
+                loop: true,
+                speed: 800,
+                spaceBetween: 30,
+
+                autoplay: {
+                    delay: 2500,
+                    reverseDirection: true
+                },
+
+                navigation: {
+                    nextEl: ".custom-prev",
+                    prevEl: ".custom-next"
+                }
+
+
+            });
+
+            const testimonialText =
+                document.getElementById("testimonialText");
+
+            function updateReview() {
+
+                const activeSlide =
+                    document.querySelector(
+                        ".testimonialSwiper .swiper-slide-active"
+                    );
+
+                if (activeSlide) {
+
+                    testimonialText.innerHTML =
+                        activeSlide.getAttribute("data-text");
+
+                }
+
+            }
+
+            swiper.on("slideChangeTransitionEnd", updateReview);
+
+            updateReview();
+
+        });
 
     </script>
 </body>
