@@ -1426,7 +1426,7 @@ img.white-line-arrow {
 /*  TESTIMONIAL SECTION START */
 
 .testimonial-section {
-    background: #000;
+    background: #080808;
     padding: 80px 0;
     overflow: hidden;
     color: #fff;
@@ -1524,6 +1524,10 @@ img.white-line-arrow {
 
 .testimonial-section .testimonialSwiper {
     direction: rtl;
+}
+
+.custm-testimonial-section .testimonialSwiper {
+    height: 400px;
 }
 
 .testimonial-section .swiper-slide {
@@ -1643,3 +1647,170 @@ img.white-line-arrow {
 }
 
 /*  TESTIMONIAL SECTION CLOSE */
+
+/* Travel Offer Section Start */
+
+/* Section Background */
+.travel-offer-section {
+    background: #f2f2f2;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Main Red Card */
+.travel-offer-section .travel-card {
+    background: url("../images/travelers-bg.png") no-repeat center center;
+    background-size: cover;
+    border-radius: 15px;
+    padding: 50px 40px;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Common Shape Style */
+.travel-offer-section .shape {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* Top Circle */
+.travel-offer-section .shape-1 {
+    width: 220px;
+    height: 220px;
+    left: 130px;
+    top: -20px;
+}
+
+/* Bottom Circle */
+.travel-offer-section .shape-2 {
+    width: 220px;
+    height: 220px;
+    left: 320px;
+    bottom: -100px;
+}
+
+/* Left Content */
+.travel-offer-section .travel-content h2 {
+    color: #ffffff;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.travel-offer-section .travel-content p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 330px;
+    margin-bottom: 30px;
+}
+
+/* CTA Button */
+.travel-offer-section .travel-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    background: #ffffff;
+    color: #111111;
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+
+    padding: 8px 8px 8px 18px;
+    border-radius: 50px;
+}
+
+/* Black Arrow Circle */
+.travel-offer-section .travel-btn span {
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+    background: #111111;
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*  Flight Image Area */
+.travel-offer-section .plane-image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* Main Image */
+.travel-offer-section .plane-image {
+    width: 380px;
+    height: 500px;
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.20);
+}
+
+/* Small Badge */
+.travel-offer-section .badge-logo {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+}
+
+/* ===================================
+   Responsive Design
+=================================== */
+@media (max-width: 991px) {
+
+    /* Remove Skew On Mobile */
+    .travel-offer-section .travel-card {
+        transform: none;
+        padding: 30px 20px;
+    }
+
+    .travel-offer-section .travel-card .row {
+        transform: none;
+    }
+
+    /* Center Text */
+    .travel-offer-section .travel-content {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .travel-offer-section .travel-content p {
+        margin: auto auto 25px;
+    }
+
+    /* Responsive Image */
+    .travel-offer-section .plane-image {
+        width: 100%;
+        max-width: 350px;
+        height: 420px;
+    }
+}
+
+/* Travel Offer Section Close */
