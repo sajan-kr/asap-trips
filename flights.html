@@ -371,9 +371,7 @@
     </datalist>
 
   </section>
-  <!-- =========================================
-     Flights Page End
-========================================= -->
+  <!--  Flights Page End -->
   <!-- FOOTER -->
   <div id="footer"></div>
 
@@ -384,329 +382,104 @@
   <script src="js/main.js"></script>
 
   <script>
-    // =========================================
-    // DOM Ready
-    // =========================================
+    document.addEventListener("DOMContentLoaded", () => {
 
-    document.addEventListener("DOMContentLoaded", function () {
+      const $ = id => document.getElementById(id);
 
-      initializeSwapAirport();
-      initializeDateValidation();
-      initializeSearchValidation();
-      initializeMultiCity();
+      // Swap Airports
+      $("swapAirport")?.addEventListener("click", () => {
+        [$("fromAirport").value, $("toAirport").value] =
+          [$("toAirport").value, $("fromAirport").value];
+      });
+
+      // Date Validation
+      const today = new Date().toISOString().split("T")[0];
+
+      if ($("departureDate") && $("returnDate")) {
+        $("departureDate").min = $("returnDate").min = today;
+
+        $("departureDate").addEventListener("change", e => {
+          $("returnDate").min = e.target.value;
+        });
+      }
+
+      // Search Validation
+      $("searchFlightBtn")?.addEventListener("click", () => {
+
+        const data = {
+          from: $("fromAirport")?.value,
+          to: $("toAirport")?.value,
+          departure: $("departureDate")?.value,
+          returnDate: $("returnDate")?.value
+        };
+
+        for (const [key, value] of Object.entries(data)) {
+          if (!value) {
+            alert(`Please select ${key}.`);
+            return;
+          }
+        }
+
+        alert(`
+Flight Search Submitted
+
+From: ${data.from}
+To: ${data.to}
+Departure: ${data.departure}
+Return: ${data.returnDate}`);
+      });
+
+      // Add Multi City Row
+      $("addFlightBtn")?.addEventListener("click", () => {
+        $("multiCityContainer").insertAdjacentHTML("beforeend", `
+            <div class="row g-3 multi-city-row mt-2">
+                <div class="col-lg-4"><input type="text" class="form-control" placeholder="Flying From"></div>
+                <div class="col-lg-4"><input type="text" class="form-control" placeholder="Flying To"></div>
+                <div class="col-lg-3"><input type="date" class="form-control"></div>
+                <div class="col-lg-1"><button class="btn btn-danger removeFlight">×</button></div>
+            </div>
+        `);
+      });
+
+      // Global Click Events
+      document.addEventListener("click", e => {
+
+        // Remove Flight Row
+        if (e.target.classList.contains("removeFlight")) {
+          e.target.closest(".multi-city-row")?.remove();
+        }
+
+        // Popular Routes
+        const routeLink = e.target.closest(".asap-popular-routes a");
+        if (routeLink) {
+          e.preventDefault();
+
+          const [from, to] = routeLink.innerText.split("→") || [];
+
+          if (from && to) {
+            $("fromAirport").value = from.trim();
+            $("toAirport").value = to.trim();
+          }
+        }
+      });
+
+      // Plane Animation Pause
+      const plane = document.querySelector(".asap-plane-img");
+
+      plane?.addEventListener("mouseenter", () =>
+        plane.style.animationPlayState = "paused"
+      );
+
+      plane?.addEventListener("mouseleave", () =>
+        plane.style.animationPlayState = "running"
+      );
 
     });
 
-    // =========================================
-    // Swap Airports
-    // =========================================
-
-    function initializeSwapAirport() {
-
-      const swapButton =
-        document.getElementById("swapAirport");
-
-      if (!swapButton) return;
-
-      swapButton.addEventListener("click", function () {
-
-        const fromAirport =
-          document.getElementById("fromAirport");
-
-        const toAirport =
-          document.getElementById("toAirport");
-
-        const tempValue =
-          fromAirport.value;
-
-        fromAirport.value =
-          toAirport.value;
-
-        toAirport.value =
-          tempValue;
-
-      });
-
-    }
-
-    // =========================================
-    // Date Validation
-    // =========================================
-
-    function initializeDateValidation() {
-
-      const departureDate =
-        document.getElementById("departureDate");
-
-      const returnDate =
-        document.getElementById("returnDate");
-
-      if (!departureDate || !returnDate) return;
-
-      const today =
-        new Date().toISOString().split("T")[0];
-
-      departureDate.min = today;
-      returnDate.min = today;
-
-      departureDate.addEventListener("change", function () {
-
-        returnDate.min =
-          departureDate.value;
-
-      });
-
-    }
-
-    // =========================================
-    // Search Validation
-    // =========================================
-
-    function initializeSearchValidation() {
-
-      const searchButton =
-        document.getElementById("searchFlightBtn");
-
-      if (!searchButton) return;
-
-      searchButton.addEventListener("click", function () {
-
-        const fromAirport =
-          document.getElementById("fromAirport").value;
-
-        const toAirport =
-          document.getElementById("toAirport").value;
-
-        const departureDate =
-          document.getElementById("departureDate").value;
-
-        const returnDate =
-          document.getElementById("returnDate").value;
-
-        if (fromAirport === "") {
-
-          alert("Please select departure airport.");
-          return;
-
-        }
-
-        if (toAirport === "") {
-
-          alert("Please select destination airport.");
-          return;
-
-        }
-
-        if (departureDate === "") {
-
-          alert("Please select departure date.");
-          return;
-
-        }
-
-        if (returnDate === "") {
-
-          alert("Please select return date.");
-          return;
-
-        }
-
-        alert(
-          "Flight Search Submitted\n\n" +
-          "From: " + fromAirport + "\n" +
-          "To: " + toAirport + "\n" +
-          "Departure: " + departureDate + "\n" +
-          "Return: " + returnDate
-        );
-
-      });
-
-    }
-
-    // =========================================
-    // Multi City
-    // =========================================
-
-    function initializeMultiCity() {
-
-      const addFlightButton =
-        document.getElementById("addFlightBtn");
-
-      const multiCityContainer =
-        document.getElementById("multiCityContainer");
-
-      if (!addFlightButton || !multiCityContainer) return;
-
-      addFlightButton.addEventListener("click", function () {
-
-        const newRow = document.createElement("div");
-
-        newRow.className =
-          "row g-3 multi-city-row mt-2";
-
-        newRow.innerHTML = `
-
-            <div class="col-lg-4">
-
-                <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Flying From">
-
-            </div>
-
-            <div class="col-lg-4">
-
-                <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Flying To">
-
-            </div>
-
-            <div class="col-lg-3">
-
-                <input
-                    type="date"
-                    class="form-control">
-
-            </div>
-
-            <div class="col-lg-1">
-
-                <button
-                    type="button"
-                    class="btn btn-danger removeFlight">
-
-                    ×
-
-                </button>
-
-            </div>
-
-        `;
-
-        multiCityContainer.appendChild(newRow);
-
-      });
-
-      document.addEventListener("click", function (event) {
-
-        if (
-          event.target.classList.contains(
-            "removeFlight"
-          )
-        ) {
-
-          event.target
-            .closest(".multi-city-row")
-            .remove();
-
-        }
-
-      });
-
-    }
-
-    // =========================================
-    // One Way Tab
-    // =========================================
-
-    document.addEventListener(
-      "shown.bs.tab",
-      function (event) {
-
-        const tabTarget =
-          event.target.getAttribute(
-            "data-bs-target"
-          );
-
-        console.log(
-          "Active Tab:",
-          tabTarget
-        );
-
-      }
+    // Bootstrap Tab Event
+    document.addEventListener("shown.bs.tab", e =>
+      console.log("Active Tab:", e.target.dataset.bsTarget)
     );
-
-    // =========================================
-    // Popular Routes Click
-    // =========================================
-
-    document.addEventListener("click", function (event) {
-
-      if (
-        event.target.closest(
-          ".asap-popular-routes a"
-        )
-      ) {
-
-        event.preventDefault();
-
-        const routeText =
-          event.target.innerText;
-
-        const route =
-          routeText.split("→");
-
-        if (route.length !== 2) return;
-
-        const fromAirport =
-          document.getElementById(
-            "fromAirport"
-          );
-
-        const toAirport =
-          document.getElementById(
-            "toAirport"
-          );
-
-        if (fromAirport && toAirport) {
-
-          fromAirport.value =
-            route[0].trim();
-
-          toAirport.value =
-            route[1].trim();
-
-        }
-
-      }
-
-    });
-
-    // =========================================
-    // Plane Animation Pause
-    // =========================================
-
-    const plane =
-      document.querySelector(
-        ".asap-plane-img"
-      );
-
-    if (plane) {
-
-      plane.addEventListener(
-        "mouseenter",
-        function () {
-
-          this.style.animationPlayState =
-            "paused";
-
-        }
-      );
-
-      plane.addEventListener(
-        "mouseleave",
-        function () {
-
-          this.style.animationPlayState =
-            "running";
-
-        }
-      );
-
-    }
   </script>
 
 </body>
